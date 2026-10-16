@@ -1,4 +1,7 @@
-function MenuCard({ item }) {
+import StarRating from "./starRating";
+
+
+function MenuCard({ item, rating, onRate}) {
   return (
     <article className="flex flex-col overflow-hidden rounded-xl bg-white shadow-sm">
       <img src={item.image} alt={item.name} className="h-48 w-full object-cover" />
@@ -8,6 +11,7 @@ function MenuCard({ item }) {
           <span className="whitespace-nowrap font-bold text-brand">Rs. {item.price}</span>
         </div>
         <p className="text-sm text-stone-600">{item.description}</p>
+        <StarRating value={rating} onChange={onRate} />
         <span className="mt-auto w-fit rounded-full bg-amber-100 px-3 py-1 text-xs text-brand-dark">
           {item.category}
         </span>

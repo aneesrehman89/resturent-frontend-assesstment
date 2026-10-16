@@ -5,6 +5,11 @@ import CategoryFilter from "./CategoryFilter";
 
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [ratings, setRatings] = useState({});
+
+  function handleRate(id, value) {
+    setRatings((prev) => ({ ...prev, [id]: value }));
+  }
 
   const visibleItems =
     selectedCategory === "All"
@@ -27,7 +32,12 @@ function Menu() {
 
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {visibleItems.map((item) => (
-          <MenuCard key={item.id} item={item} />
+          <MenuCard
+            key={item.id}
+            item={item}
+            rating={ratings[item.id] ?? 0}
+            onRate={(value) => handleRate(item.id, value)}
+          />
         ))}
       </div>
     </section>
