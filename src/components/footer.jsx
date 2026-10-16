@@ -11,7 +11,7 @@ function Footer() {
         <div>
           <h4 className="font-semibold text-white">Visit Us</h4>
           <p className="mt-2 text-sm">12 Main Boulevard, Lahore</p>
-          <p className="text-sm">+92 300 0000000</p>
+          <p className="text-sm">+92 312 6426807</p>
         </div>
         <div>
           <h4 className="font-semibold text-white">Hours</h4>
