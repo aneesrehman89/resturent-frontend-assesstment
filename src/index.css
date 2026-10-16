@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #b45309;
+  --color-brand-dark: #78350f;
+  --color-cream: #fdf6ec;
+  --font-display: "Playfair Display", serif;
+}
